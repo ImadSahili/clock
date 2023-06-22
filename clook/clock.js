@@ -4,9 +4,14 @@ const audio = document.querySelector("audio");
 const ul = document.querySelector("ul");
 const hTo = document.querySelector("h2");
 const lu = document.getElementById("lu").children;
-const textValue=document.getElementById("textValue")
+const textValue = document.getElementById("textValue");
+const select=document.querySelector("select")
+let langue="ar-AE"
 save.addEventListener("click", savef);
 let aryTime = [];
+select.addEventListener("change",()=>{
+  langue=select.value
+})
 function saveClock() {
   let date = new Date();
   let hh = date.getHours();
@@ -25,10 +30,11 @@ function saveClock() {
       aryTime.splice(index, 1);
       lu[index].style.color = "aqua";
       const text = new SpeechSynthesisUtterance(textValue.value);
-      text.lang='ar-AE'
-      for (let i = 1; i <= 7; i++) {
+      text.lang = langue;
+      for (let i = 1; i <= 3; i++) {
         speechSynthesis.speak(text);
       }
+     
       // audio.play();
       setTimeout(() => {
         removeJsx();
