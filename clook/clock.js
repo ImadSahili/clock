@@ -6,7 +6,7 @@ const hTo = document.querySelector("h2");
 const lu = document.getElementById("lu").children;
 const textValue = document.getElementById("textValue");
 const select=document.querySelector("select")
-let langue="en-US"
+let langue="ar-AE"
 save.addEventListener("click", savef);
 let aryTime = [];
 select.addEventListener("change",()=>{
