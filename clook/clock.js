@@ -6,13 +6,11 @@ const hTo = document.querySelector("h2");
 const lu = document.getElementById("lu").children;
 const textValue = document.getElementById("textValue");
 const select=document.querySelector("select")
-let langue={
-  lg:"ar-AE"
-}
+let langue="en-US"
 save.addEventListener("click", savef);
 let aryTime = [];
 select.addEventListener("change",()=>{
-  langue.lg=select.value
+  langue=select.value
 })
 function saveClock() {
   let date = new Date();
@@ -32,7 +30,7 @@ function saveClock() {
       aryTime.splice(index, 1);
       lu[index].style.color = "aqua";
       const text = new SpeechSynthesisUtterance(textValue.value);
-      text.lang = langue.lg;
+      text.lang = langue;
       for (let i = 1; i <= 3; i++) {
         speechSynthesis.speak(text);
       }
@@ -66,3 +64,4 @@ function removeJsx() {
     ul.innerHTML += `<li>${aryTime[index]}</li>`;
   }
 }
+
