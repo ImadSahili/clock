@@ -78,7 +78,7 @@
       /* background-color: red; */
       width: 80%;
       height: 250px;
-      overflow: scroll;
+      overflow: auto;
       
       >li{
         list-style-type: none;
