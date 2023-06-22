@@ -3,6 +3,7 @@ const save = document.querySelector("button");
 const audio = document.querySelector("audio");
 const ul = document.querySelector("ul");
 const hTo=document.querySelector("h2")
+const lu=document.getElementById("lu").children
 save.addEventListener("click", savef);
 let aryTime = [];
 function saveClock() {
@@ -14,6 +15,7 @@ function saveClock() {
   for (let index = 0; index < aryTime.length; index++) {
     if (`${( hh < 10 ? "0"+hh:hh)}:${( mm < 10 ? "0"+mm:mm)}` == aryTime[index]) {
       aryTime.splice(index, 1);
+      lu[index].style.color="aqua"
       audio.play();
       setTimeout(() => {
         removeJsx();
@@ -23,22 +25,27 @@ function saveClock() {
       // }, 30000);
     }
   }
-  // console.log(`${hh}:${mm}`)
-  // console.log(inputValue.value)
-  // console.log(ul);
+  // console.log(lu)
+  // console.log(aryTime)
+  //nextElementSibling
+
   setTimeout(function () {
     saveClock();
   }, 1000);
 }
 saveClock();
 function savef() {
+  if(inputValue.value=="")return
   aryTime.push(inputValue.value);
   ul.innerHTML += `<li>${inputValue.value}</li>`;
+
+  inputValue.value=""
 }
 
 function removeJsx() {
-  ul.innerHTML="<ul></ul>"
-  for (let i = 0; i < aryTime.length; i++) {
-    ul.innerHTML += `<li>${aryTime[i]}</li>`;
+  ul.innerHTML=""
+  for(let index=0;index<aryTime.length;index++){
+    ul.innerHTML += `<li>${aryTime[index]}</li>`;
   }
+ 
 }
