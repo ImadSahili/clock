@@ -28,20 +28,12 @@
     > h2 {
       font-size: 2.5rem;
     }
-    > .nav {
-      display: flex;
-      > h1 {
-        > span {
-          color: aqua;
-        }
-      }
-      > select {
-        outline: none;
-       margin-left: 3rem;
-       height: 20px;
-      
+    > h1 {
+      > span {
+        color: aqua;
       }
     }
+
     > label {
       width: 35px;
       height: 35px;
