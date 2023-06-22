@@ -12,7 +12,7 @@ function saveClock() {
   let ss = date.getSeconds()
   hTo.innerHTML=( hh < 10 ? "0"+hh:hh)+" : "+( mm < 10 ? "0"+mm:mm)+" : "+( ss < 10 ? "0"+ss:ss)
   for (let index = 0; index < aryTime.length; index++) {
-    if (`${hh}:${mm}` == aryTime[index]) {
+    if (`${( hh < 10 ? "0"+hh:hh)}:${( mm < 10 ? "0"+mm:mm)}` == aryTime[index]) {
       aryTime.splice(index, 1);
       audio.play();
       setTimeout(() => {
