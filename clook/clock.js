@@ -23,7 +23,8 @@ function saveClock() {
     ) {
       aryTime.splice(index, 1);
       lu[index].style.color = "aqua";
-      const text = new SpeechSynthesisUtterance("imad imad imad salat one");
+     const text = new SpeechSynthesisUtterance("عربي");
+      text.lang='ar-AE'
       for (let i = 1; i <= 7; i++) {
         speechSynthesis.speak(text);
       }
