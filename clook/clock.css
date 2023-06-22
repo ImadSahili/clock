@@ -15,7 +15,7 @@
 
   .clockApp {
     position: relative;
-    background-color:black;
+    background-color: black;
     width: 500px;
     height: 600px;
     display: flex;
@@ -25,10 +25,24 @@
     gap: 1rem;
     border-radius: 30px;
     padding-top: 2rem;
-    >h2{
+    > h2 {
       font-size: 2.5rem;
     }
-    >label{
+    > .nav {
+      display: flex;
+      > h1 {
+        > span {
+          color: aqua;
+        }
+      }
+      > select {
+        outline: none;
+       margin-left: 3rem;
+       height: 20px;
+      
+      }
+    }
+    > label {
       width: 35px;
       height: 35px;
       background-color: aqua;
@@ -40,41 +54,18 @@
       font-weight: bold;
       cursor: pointer;
     }
-    /* > input {
-      padding: 1rem;
-      width: 300px;
-      height: 30px;
-      border-radius: 10px;
-      outline: none;
-      border: 1px solid grey;
-      
-     
-    } */
     > input {
-      /* padding: 1rem; */
-      width: 0px;
-      height: 0px;
-      border-radius: 10px;
-      outline: none;
-      border: 1px solid grey;
-      opacity: 0;
-     
-    }
-    > #textValue {
       padding: 1rem;
       width: 300px;
       height: 30px;
       border-radius: 10px;
       outline: none;
       border: 1px solid grey;
-       opacity: 1;
-      
-     
     }
-    > button {
 
+    > button {
       font-size: 1.2rem;
-      
+
       height: 30px;
       border-radius: 20px;
       outline: none;
@@ -85,11 +76,11 @@
       position: absolute;
       bottom: 30px;
     }
-    >button:hover{
+    > button:hover {
       background-color: aqua;
-      color:white;
+      color: white;
     }
-    >ul{
+    > ul {
       padding-top: 3rem;
       display: flex;
       flex-direction: column;
@@ -100,12 +91,23 @@
       width: 80%;
       height: 250px;
       overflow: auto;
-      
-      >li{
+
+      > li {
         list-style-type: none;
         font-size: 1.8rem;
       }
     }
-
   }
 }
+
+/* @media (max-width: 480px) {
+  #time {
+    padding: 1rem;
+    width: 0px;
+    height: 0px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+    opacity: 0;
+  }
+} */
