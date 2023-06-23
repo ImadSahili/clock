@@ -7,7 +7,6 @@ const lu = document.getElementById("lu").children;
 const textValue = document.getElementById("textValue");
 let aryTime = [];
 save.addEventListener("click", savef);
-
 function saveClock() {
   let date = new Date();
   let hh = date.getHours();
@@ -29,7 +28,7 @@ function saveClock() {
       for (let i = 1; i <= 3; i++) {
         speechSynthesis.speak(text);
       }
-     
+
       // audio.play();
       setTimeout(() => {
         removeJsx();

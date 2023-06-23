@@ -92,7 +92,7 @@
   }
 }
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   #time {
     padding: 1rem;
     width: 0px;
@@ -102,4 +102,4 @@
     border: 1px solid grey;
     opacity: 0;
   }
-} */
+}
